@@ -65,7 +65,6 @@ def UseProgram(diag, session):
 
 async def plots(message, ready):
     fig, ax = plt.subplots()
-    await bot.send_message(message.chat.id, str(ready))
     ax.bar(config.x_list, ready, color=['red', 'green', 'blue', 'violet', 'yellow', 'gray', 'orange', 'violet'])
     plt.ylim(0, 100)
     fig.set_figwidth(11)    # ширина Figure
